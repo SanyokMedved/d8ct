@@ -1,0 +1,14 @@
+name: Test Theme
+type: theme
+description: 'Empty theme for test task'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: classy
+libraries:
+  - test_theme/global_styling
+regions:
+  header: Header
+  content: Content
+  aside_left: 'Sidebar Left'
+  aside_right: 'Sidebar Right'
+  footer: Footer
