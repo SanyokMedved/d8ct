@@ -1,0 +1,9 @@
+name: Test Task Custom module
+description: Test Task custom module.
+package: Custom
+
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block
