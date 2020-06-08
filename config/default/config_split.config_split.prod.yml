@@ -1,0 +1,16 @@
+uuid: c90409b1-53d0-45a5-a9d4-7e6e733bcf0b
+langcode: en
+status: false
+dependencies: {  }
+id: prod
+label: Prod
+description: 'Prod configs'
+folder: ../config/prod
+module: {  }
+theme: {  }
+blacklist:
+  - devel.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

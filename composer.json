@@ -16,8 +16,11 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "^9"
+        "drupal/core-recommended": "^9",
+        "drupal/devel": "4.x-dev",
+        "drush/drush": "^10.2"
     },
     "conflict": {
         "drupal/drupal": "*"

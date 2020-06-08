@@ -1,0 +1,24 @@
+uuid: f7773f83-f3bb-4d1a-9bf6-d74768dd4d00
+langcode: en
+status: true
+dependencies:
+  module:
+    - test_module
+  theme:
+    - test_theme
+id: testmodulecustomblock
+theme: test_theme
+region: content
+weight: -3
+provider: null
+plugin: test_module_example_block
+settings:
+  id: test_module_example_block
+  label: 'Test Module Custom Block'
+  provider: test_module
+  label_display: '0'
+  heading: 'Heading 1'
+  copy:
+    value: "<p>Copy 1</p>\r\n"
+    format: full_html
+visibility: {  }

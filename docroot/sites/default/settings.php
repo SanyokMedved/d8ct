@@ -290,7 +290,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'N3pD7ZYohpgl9E-bm5bv5mV3kE7ICpOcir5rhyN8X6qjdjRtbUuEJEK_584uE2p4jXt9Q_eMIQ';
 
 /**
  * Deployment identifier.
@@ -767,6 +767,29 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
+$config_directories['sync'] = '../config/default';
+$settings['config_sync_directory'] = '../config/default';                                          
+
+// Some fake environment flag.
+$is_prod = false;
+if (!$is_prod) {
+  $config['config_split.config_split.prod']['status'] = FALSE;
+}
+else {
+  $config['config_split.config_split.prod']['status'] = TRUE;
+}
+
+$databases['default']['default'] = array (
+  'database' => 'default',
+  'username' => 'user',
+  'password' => 'user',
+  'prefix' => '',
+  'host' => '192.168.64.100',
+  'port' => '33062',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
